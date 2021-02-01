@@ -1,0 +1,43 @@
+body {
+	background-image: url('./bg.jpg');
+	background-size: cover;
+}
+
+.login-form label {
+	display: block;
+}
+
+.login-form button {
+    background: #562483;
+    border: 0px;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+#login_form_container {
+    position: relative;
+    padding: 20px;
+}
+
+div#login_form_container::before {
+    content: '';
+    position: absolute;
+    top: -180px;
+    left: -8px;
+    z-index: -1;
+    border-bottom: 250px solid transparent;
+    border-top: 250px solid transparent;
+    border-left: 320px solid #ffffff75;
+}
+
+.login-form input {
+    background: #efefef;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    height: 100%;
+    position: relative;
+}

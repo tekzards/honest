@@ -1,14 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button } from 'react-native-elements';
+import './app.css';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Welcome to Honest Shopy!!!</Text>
-      <Button title="Click" icon={{name : 'code'}}></Button>
-      <StatusBar style="auto" />
+	  <div id="login_container">
+		<div id="login_form_container">
+			<form id="login_form" className="login-form">
+				<label>
+					<input type="text" placeholder="Username" name="username" id="username_input" />
+				</label>
+				<label>
+					<input type="password" placeholder="Password" name="password" id="password_input" />
+				</label><br/>
+				<button type="submit"> LOG IN </button>
+			</form>
+		</div>
+	  </div>
     </View>
   );
 }
@@ -16,8 +25,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  login_form : {
+	  font: '4em',
+  }
+  
 });
+
+
+console.log('this is working');
