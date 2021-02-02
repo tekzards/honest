@@ -65,7 +65,7 @@ export default function Camera(navigation) {
         }}>
       </Button>
       <Button title="Take Picture" onPress={() => takePicture()} />
-      <Button title="Pick Image from Gallery" onPress={() => pickImage()} />
+      <Button title="Upload Image" onPress={() => pickImage()} />
       <Button title="Save" onPress={() => navigation.navigate('Save', {image})} />
       {image && <Image source={{uri: image}} style={{flex: 1}} />}
     </View>
