@@ -18,13 +18,9 @@ import HomeScreen from "./components/main/Home"
 import RestaurantScreen from "./components/main/Restaurant"
 // import SaveScreen from './components/main/Save'
 // import CameraScreen from './components/main/Camera'
-
-<<<<<<< HEAD
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-=======
->>>>>>> cf655e0c3e810776603fb322fe5d6c8bed233b52
 const store = createStore(rootReducer, applyMiddleware(thunk))
 const firebaseConfig = {
   apiKey: "AIzaSyDpsBChU4xOkKWf74f0-bO-1HefjO5QF-A",
