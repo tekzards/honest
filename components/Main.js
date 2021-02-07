@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { fetchUser } from '../redux/actions/index'
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-import FeedScreen from "./main/Feed";
+import HomeScreen from "./main/Home";
 import AddScreen from "./main/Add";
 import ProfileScreen from "./main/Profile";
 import SearchScreen from "./main/Search";
@@ -17,8 +17,8 @@ export class Main extends Component {
     }
     render() {
         return (
-            <Tab.Navigator initialRoutName="Feed" labeled={false}>
-                <Tab.Screen name="Feed" component={FeedScreen} 
+            <Tab.Navigator initialRoutName="Home" labeled={false}>
+                <Tab.Screen name="Home" component={HomeScreen} 
                     options={{
                         tabBarIcon: ({ color, size }) => (
                             <MaterialCommunityIcons name="table-chair" color={color} size={26} />

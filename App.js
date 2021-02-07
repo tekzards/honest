@@ -14,6 +14,10 @@ import SignupScreen from './components/auth/Signup'
 import SigninScreen from './components/auth/Signin'
 import MainScreen from './components/Main'
 import AddScreen from './components/main/Add'
+import HomeScreen from "./components/main/Home"
+import RestaurantScreen from "./components/main/Restaurant"
+// import SaveScreen from './components/main/Save'
+// import CameraScreen from './components/main/Camera'
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 const firebaseConfig = {
@@ -84,6 +88,10 @@ export class App extends Component {
           <Stack.Navigator initialRouteName="Main">
             <Stack.Screen name="Main" component={MainScreen} options={{ headerShown: false }} />
             <Stack.Screen name="Add" component={AddScreen} />
+            <Stack.Screen name="Home" component={HomeScreen} />
+            {/* <Stack.Screen name="Camera" component={CameraScreen} navigation={this.props.navigation} />
+            <Stack.Screen name="Save" component={SaveScreen} navigation={this.props.navigation} /> */}
+            <Stack.Screen name="Restaurant" component={RestaurantScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </Provider>

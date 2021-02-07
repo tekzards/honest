@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import { Camera } from 'expo-camera';
 import * as ImagePicker from 'expo-image-picker';
 
-export default function Camera(navigation) {
+export default function Camera({ navigation }) {
   const [hasCameraPermission, setCameraHasPermission] = useState(null);
   const [hasGalleryPermission, setGalleryHasPermission] = useState(null);
   const [camera, setCamera] = useState(null);
