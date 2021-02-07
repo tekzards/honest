@@ -66,13 +66,9 @@ export class App extends Component {
     const { loggedIn, loaded } = this.state;
     if (!loaded) {
       return (
-<<<<<<< HEAD
+
         <View style={{ flex: 1, justifyContent: 'center', display: "flex", alignItems: "center" }}>
           <Text><CircularProgress /></Text>
-=======
-        <View style={{ flex: 1, justifyContent: 'center' }}>
-          <Text>Loading</Text>
->>>>>>> cf655e0c3e810776603fb322fe5d6c8bed233b52
         </View>
       )
     }
