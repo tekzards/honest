@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { USER_STATE_CHANGE } from '../constants/index'
 import firebase from 'firebase'
 
@@ -16,4 +17,24 @@ export function fetchUser(){
                 }
             })
     })
+=======
+import { USER_STATE_CHANGE } from '../constants/index'
+import firebase from 'firebase'
+
+export function fetchUser(){
+    return((dispatch) => {
+        firebase.firestore()
+            .collection("users")
+            .doc(firebase.auth().currentUser.uid)
+            .get()
+            .then((snapshot) => {
+                if(snapshot.exists){
+                    dispatch({type: USER_STATE_CHANGE, currentUser: snapshot.data()})
+                }
+                else{
+                    console.log('does not exist')
+                }
+            })
+    })
+>>>>>>> cf655e0c3e810776603fb322fe5d6c8bed233b52
 }
